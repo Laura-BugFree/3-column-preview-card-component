@@ -47,8 +47,9 @@ Users should be able to:
 
 ### What I learned
 
-I have recently learnt in a course, using custom properties to make a component design more versatile. 
-Using the contrasting colours to also see if something is not working correctly, its very simple way to not miss something.
+I recently learnt to use Scoped Custom Properties with a Utility-Based CSS, 
+allowing different elements to inherit styling from a shared [class*="bg-"] 
+selector while modifying their appearance through locally defined --bg and --fg variables.
 
 ```css
 [class*="bg-"] {
