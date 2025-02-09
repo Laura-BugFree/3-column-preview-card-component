@@ -1,0 +1,161 @@
+:root {
+    --clr-primary-100: hsl(31, 77%, 52%);
+    --clr-primary-200: hsl(184, 100%, 22%);
+    --clr-primary-300: hsl(179, 100%, 13%);
+
+    --clr-neutral-100: hsla(0, 0%, 100%, 0.75);
+    --clr-neutral-200: hsl(0, 0%, 95%);
+
+    --ff-primary: "Lexend Deca", sans-serif;
+    --ff-secondary: "Big Shoulders Display", sans-serif;
+
+    --fs-400: 0.9375rem;
+    --fs-500: 1rem;
+    --fs-600: 2rem;
+
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-400);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--fg, red);
+}
+
+h2,
+.h2 {
+    font-family: var(--ff-secondary);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-700);
+    text-transform: uppercase;
+}
+
+.btn {
+    font-family: inherit;
+    font-size: var(--fs-500);
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    display: inline-block;
+    padding: .75em 2em;
+    border-radius: 100vw;
+    background-color: var(--clr-neutral-200);
+    color: var(--bg, fuchsia);    
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.btn:hover,
+.btn:focus-visible {
+    background-color: var(--bg, transparent);
+    color: var(--fg, pink);
+    outline: 3px solid var(--fg, red);
+}
+
+[class*="bg-"] {
+    background-color: var(--bg, purple);
+    color: var(--fg, var(--clr-neutral-100));
+}
+
+.bg-card1 {
+    --bg: var(--clr-primary-100);
+    --fg: var(--clr-neutral-100);
+}
+
+.bg-card2 {
+    --bg: var(--clr-primary-200);
+    --fg: var(--clr-neutral-100);
+}
+
+.bg-card3 {
+    --bg: var(--clr-primary-300);
+    --fg: var(--clr-neutral-100);
+}
+
+.bg-card1.border-style {
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+}
+
+.bg-card3.border-style {
+    border-bottom-right-radius: .5em;
+    border-bottom-left-radius: .5em;
+}
+
+.cards {
+    width: 90%;
+    max-width: 60rem;
+    padding-block: 5em;
+}
+
+.card .contents {
+    padding: 4em 3em;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column
+}
+
+
+
+.card .flex {
+    gap: 2em;
+    align-items: start;
+}
+
+@media (width > 50rem) {
+    .cards.flex {
+        flex-direction: row;
+    }
+    
+    .btn {
+        margin-block-start: 2.5em;
+    }
+
+    .bg-card1.border-style {
+        border-top-left-radius: .5em;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .5em;
+    }
+    
+    .bg-card3.border-style {
+        border-bottom-right-radius: .5em;
+        border-bottom-left-radius: 0;    
+        border-top-right-radius: .5em;
+    }
+    
+}
