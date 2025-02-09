@@ -51,6 +51,8 @@ I recently learnt to use Scoped Custom Properties with a Utility-Based CSS,
 allowing different elements to inherit styling from a shared [class*="bg-"] 
 selector while modifying their appearance through locally defined --bg and --fg variables.
 
+I have left the other colours in, to my method, if anything breaks I will see if immidiatly.
+
 ```css
 [class*="bg-"] {
     background-color: var(--bg, purple);
